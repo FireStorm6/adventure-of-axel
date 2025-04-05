@@ -1,0 +1,9 @@
+[gd_scene load_steps=0 format=3 uid="uid://bsd87gmimi2q0"]
+
+[node name="HealthBar" type="TextureProgressBar"]
+anchors_preset = -1
+anchor_top = -0.043
+anchor_right = 0.042
+offset_top = 11.61
+offset_right = 19.84
+offset_bottom = 40.0

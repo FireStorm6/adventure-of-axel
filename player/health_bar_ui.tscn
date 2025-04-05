@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxnt27cxhsxw2"]
+
+[ext_resource type="Texture2D" uid="uid://b1x0ui7bkyr38" path="res://GUI/healthbar/healthbarUnder.png" id="1_mw1rx"]
+[ext_resource type="Texture2D" uid="uid://ctongepthhgkj" path="res://GUI/healthbar/healthbarProgress.png" id="2_db5tr"]
+
+[sub_resource type="SystemFont" id="SystemFont_pi42a"]
+font_names = PackedStringArray("Arial")
+font_weight = 575
+font_stretch = 200
+force_autohinter = true
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+msdf_size = 207
+oversampling = 5.0
+
+[node name="HealthBarUi" type="CanvasLayer"]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 65.0
+offset_bottom = 34.0
+value = 100.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = -1
+anchor_right = 0.152083
+anchor_bottom = 0.0222222
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 22.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_mw1rx")
+texture_progress = ExtResource("2_db5tr")
+tint_under = Color(0, 0.682353, 0.403922, 1)
+tint_progress = Color(0.862745, 0, 0.368627, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="health_label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 137.0
+offset_bottom = 13.0
+theme_override_fonts/font = SubResource("SystemFont_pi42a")
+theme_override_font_sizes/font_size = 6
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1

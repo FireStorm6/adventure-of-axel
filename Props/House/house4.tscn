@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dapm47byuuykr"]
+
+[ext_resource type="Texture2D" uid="uid://cfbymo6pfvo2s" path="res://Props/Sprites/strokevillage0001.png" id="1_yq48n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y2q1"]
+size = Vector2(112, 65)
+
+[node name="house4" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, -49)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_yq48n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -9)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, -10.5)
+shape = SubResource("RectangleShape2D_0y2q1")
